@@ -1,4 +1,4 @@
-package dev.pivozavrus.jnotunit.core;
+package dev.pivozavr.jnotunit.core;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

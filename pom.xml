@@ -4,10 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.pivozavrus.jnotunit</groupId>
-    <artifactId>pivozavrus-jnotunit-core</artifactId>
+    <groupId>dev.pivozavr.jnotunit</groupId>
+    <artifactId>pivozavr-jnotunit-core</artifactId>
     <version>1.0</version>
     <name>jNotUnit-core</name>
+    <description>A description of my project</description>
+    <url>https://github.com/13nadcatiy/jNotUnit-core</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

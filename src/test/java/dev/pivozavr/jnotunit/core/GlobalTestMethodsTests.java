@@ -1,4 +1,4 @@
-package dev.pivozavrus.jnotunit.core;
+package dev.pivozavr.jnotunit.core;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,14 +29,16 @@ public class GlobalTestMethodsTests implements GlobalBeforeAndAfterCallBack {
         assertEquals(1, globalBeforeCallCount);
         assertEquals(1, globalAfterCallCount);
 
-        assertTrue(classBeforeCallCount > 1);
-        assertTrue(classAfterCallCount > 1);
+        assertEquals(2, classBeforeCallCount);
+        assertEquals(2, classAfterCallCount);
     }
 
     @BeforeAll
     public static void beforeClass() {
         assertEquals(1, globalBeforeCallCount);
         assertEquals(0, globalAfterCallCount);
+
+        assertTrue(classBeforeCallCount < 2);
 
         classBeforeCallCount++;
 
@@ -47,6 +49,8 @@ public class GlobalTestMethodsTests implements GlobalBeforeAndAfterCallBack {
     public static void afterClass(){
         assertEquals(1, globalBeforeCallCount);
         assertEquals(0, globalAfterCallCount);
+
+        assertTrue(classAfterCallCount < 2);
 
         classAfterCallCount++;
 
