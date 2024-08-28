@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(GlobalTestMethodsTests.class)
 public class GlobalTestMethodsTests implements GlobalBeforeAndAfterCallBack {
+
     static int globalBeforeCallCount = 0;
     static int globalAfterCallCount = 0;
     static int classBeforeCallCount = 0;
@@ -36,10 +37,10 @@ public class GlobalTestMethodsTests implements GlobalBeforeAndAfterCallBack {
         assertEquals(1, globalBeforeCallCount);
         assertEquals(1, globalAfterCallCount);
 
-        assertEquals(2, classBeforeCallCount);
-        assertEquals(2, classAfterCallCount);
+        assertEquals(20, classBeforeCallCount);
+        assertEquals(20, classAfterCallCount);
 
-        assertEquals(4, testCallCount);
+        assertEquals(40, testCallCount);
     }
 
     @BeforeAll
