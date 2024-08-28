@@ -1,16 +1,11 @@
 package dev.pivozavr.jnotunit.core;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.RepeatedTest;
 
 class A0 extends GlobalTestMethodsTests {
 
-    @Test
-    public void countCallBeforeAndAfterTest_1() {
-        mainAssert();
-    }
-
-    @Test
-    public void countCallBeforeAndAfterTest_2() {
+    @RepeatedTest(2)
+    public void countCallBeforeAndAfterTest() {
         mainAssert();
     }
 }
