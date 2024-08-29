@@ -7,9 +7,8 @@ import java.util.ArrayList;
 
 public class ObjectToJsonStringTests {
 
-
     @Test
-    public void objectToStringTest(){
+    public void objectToStringTest() {
         String expectedResult = "{\n" +
                 "  \"id\" : 123,\n" +
                 "  \"name\" : \"TestName\",\n" +
