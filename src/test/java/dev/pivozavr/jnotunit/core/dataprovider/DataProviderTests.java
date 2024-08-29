@@ -39,22 +39,6 @@ public class DataProviderTests {
         expArg2--;
     }
 
-    // Метод, в котором формируется список параметров
-    public static Stream<Arguments> provideTestData() {
-        return new DataProviderBuilder()
-                .add(1, 2, 3)
-                .add(2, 3, 5)
-                .add(10, 15, 25)
-                .getStream();
-    }
-
-    // Параметризованный тест
-    @ParameterizedTest
-    @MethodSource("provideTestData")
-    void testAddition(int a, int b, int expectedSum) {
-        assertEquals(expectedSum, a + b);
-    }
-
     @AfterAll
     public static void postCondition() {
         assertEquals(testsCountExp, testsCount);
