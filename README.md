@@ -26,7 +26,7 @@
     <dependency>
         <groupId>com.github.13nadcatiy</groupId>
         <artifactId>jNotUnit-core</artifactId>
-        <version>release-1.1.0</version>
+        <version>release-1.3.0</version>
     </dependency>
 </dependencies>
 ```
