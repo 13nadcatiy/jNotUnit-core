@@ -22,7 +22,7 @@ public class DataProviderTests {
         int arg2 = 100;
         DataProviderBuilder list = new DataProviderBuilder()
                 .add(++arg1, --arg2);
-        while (arg1 < 100){
+        while (arg1 < 100) {
             list.add(++arg1, --arg2);
         }
         testsCountExp = (int) list.getStream().count();
@@ -39,8 +39,24 @@ public class DataProviderTests {
         expArg2--;
     }
 
+    // Метод, в котором формируется список параметров
+    public static Stream<Arguments> provideTestData() {
+        return new DataProviderBuilder()
+                .add(1, 2, 3)
+                .add(2, 3, 5)
+                .add(10, 15, 25)
+                .getStream();
+    }
+
+    // Параметризованный тест
+    @ParameterizedTest
+    @MethodSource("provideTestData")
+    void testAddition(int a, int b, int expectedSum) {
+        assertEquals(expectedSum, a + b);
+    }
+
     @AfterAll
-    public static void postCondition(){
+    public static void postCondition() {
         assertEquals(testsCountExp, testsCount);
     }
 }

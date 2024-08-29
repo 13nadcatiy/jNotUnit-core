@@ -6,7 +6,7 @@
 
     <groupId>dev.pivozavr.jnotunit</groupId>
     <artifactId>pivozavr-jnotunit-core</artifactId>
-    <version>1.1.0</version>
+    <version>1.3.0</version>
     <name>jNotUnit-core</name>
     <description>A description of my project</description>
     <url>https://github.com/13nadcatiy/jNotUnit-core</url>
@@ -24,9 +24,15 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit-jupiter.version>5.10.0</junit-jupiter.version>
+        <jackson.core.version>2.12.7.1</jackson.core.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -41,6 +47,11 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit-jupiter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.core.version}</version>
         </dependency>
     </dependencies>
 
