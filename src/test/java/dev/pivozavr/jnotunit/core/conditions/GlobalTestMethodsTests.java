@@ -1,5 +1,6 @@
-package dev.pivozavr.jnotunit.core;
+package dev.pivozavr.jnotunit.core.conditions;
 
+import dev.pivozavr.jnotunit.core.GlobalBeforeAndAfterCallBack;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;

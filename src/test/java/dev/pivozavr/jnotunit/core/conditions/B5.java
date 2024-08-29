@@ -1,8 +1,8 @@
-package dev.pivozavr.jnotunit.core;
+package dev.pivozavr.jnotunit.core.conditions;
 
 import org.junit.jupiter.api.Test;
 
-class A7 extends GlobalTestMethodsTests {
+class B5 extends GlobalTestMethodsTests {
 
     @Test
     public void countCallBeforeAndAfterTest_1() {

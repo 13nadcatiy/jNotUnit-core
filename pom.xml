@@ -6,7 +6,7 @@
 
     <groupId>dev.pivozavr.jnotunit</groupId>
     <artifactId>pivozavr-jnotunit-core</artifactId>
-    <version>1.07</version>
+    <version>1.1.0</version>
     <name>jNotUnit-core</name>
     <description>A description of my project</description>
     <url>https://github.com/13nadcatiy/jNotUnit-core</url>
@@ -23,14 +23,24 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.jupiter.version>5.8.1</junit.jupiter.version>
+        <junit-jupiter.version>5.10.0</junit-jupiter.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-jupiter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.jupiter.version}</version>
+            <version>${junit-jupiter.version}</version>
         </dependency>
     </dependencies>
 
