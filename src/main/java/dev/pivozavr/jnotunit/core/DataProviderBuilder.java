@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 public class DataProviderBuilder {
 
-    private final List<Object[]> list = new ArrayList<>();
+    private final ArrayList<Object[]> list = new ArrayList<>();
 
     /**
      * Вызывается после создания объекта dataProvider
@@ -61,8 +61,8 @@ public class DataProviderBuilder {
      *
      * @return
      */
-    public Stream<Arguments> getStream() {
-        return list.stream().map(Arguments::of);
+    public ArrayList<Arguments> getList() {
+        return list.stream().map(Arguments::of).collect(Collectors.toCollection(ArrayList::new));
     }
 
     private <T> ArrayList<T> applyValueToFields(T obj, String value) {

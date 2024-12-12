@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.util.ArrayList;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,7 +18,7 @@ public class DataProviderTests{
     public static int testsCount = 0;
     public static int testsCountExp = 0;
 
-    public static Stream<Arguments> dataProvider() {
+    public static ArrayList<Arguments> dataProvider() {
         int arg1 = 0;
         int arg2 = 10;
         DataProviderBuilder list = new DataProviderBuilder()
@@ -25,8 +26,8 @@ public class DataProviderTests{
         while (arg1 < 10) {
             list.add(++arg1, --arg2);
         }
-        testsCountExp = (int) list.getStream().count();
-        return list.getStream();
+        testsCountExp = list.getList().size();
+        return list.getList();
     }
 
     @MethodSource("dataProvider")
