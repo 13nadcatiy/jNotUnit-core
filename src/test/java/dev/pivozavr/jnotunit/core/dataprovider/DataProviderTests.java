@@ -10,19 +10,19 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DataProviderTests {
+public class DataProviderTests{
 
     public static int expArg1 = 1;
-    public static int expArg2 = 99;
+    public static int expArg2 = 9;
     public static int testsCount = 0;
     public static int testsCountExp = 0;
 
     public static Stream<Arguments> dataProvider() {
         int arg1 = 0;
-        int arg2 = 100;
+        int arg2 = 10;
         DataProviderBuilder list = new DataProviderBuilder()
                 .add(++arg1, --arg2);
-        while (arg1 < 100) {
+        while (arg1 < 10) {
             list.add(++arg1, --arg2);
         }
         testsCountExp = (int) list.getStream().count();

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-public class ObjectToJsonStringTests {
+public class ModelToJsonStringTests {
 
     @Test
     public void objectToStringTest() {
@@ -22,11 +22,11 @@ public class ObjectToJsonStringTests {
         num.add(8);
         num.add(5);
 
-        TestBean bean = TestBean.builder()
-                .id(123)
-                .name("TestName")
-                .numbers(num)
-                .build();
+        TestModel bean = TestModel.builder()
+                                  .id(123)
+                                  .name("TestName")
+                                  .numbers(num)
+                                  .build();
 
         Assertions.assertEquals(expectedResult, bean.toString());
     }

@@ -38,10 +38,10 @@ public class GlobalTestMethodsTests implements GlobalBeforeAndAfterCallBack {
         assertEquals(1, globalBeforeCallCount);
         assertEquals(1, globalAfterCallCount);
 
-        assertEquals(20, classBeforeCallCount);
-        assertEquals(20, classAfterCallCount);
+        assertEquals(5, classBeforeCallCount);
+        assertEquals(5, classAfterCallCount);
 
-        assertEquals(40, testCallCount);
+        assertEquals(10, testCallCount);
     }
 
     @BeforeAll

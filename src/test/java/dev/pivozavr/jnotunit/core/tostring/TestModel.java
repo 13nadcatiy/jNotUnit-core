@@ -1,6 +1,6 @@
 package dev.pivozavr.jnotunit.core.tostring;
 
-import dev.pivozavr.jnotunit.core.ObjectToJsonStringSerializable;
+import dev.pivozavr.jnotunit.core.ModelToJsonString;
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 @Data
 @Builder
-public class TestBean implements ObjectToJsonStringSerializable {
+public class TestModel implements ModelToJsonString {
 
     Integer id;
     String name;

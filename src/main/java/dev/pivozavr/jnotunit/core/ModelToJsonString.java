@@ -3,15 +3,15 @@ package dev.pivozavr.jnotunit.core;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
-public interface ObjectToJsonStringSerializable {
+public interface ModelToJsonString {
 
-    private static <T> String toJsonStringMapper(T object) {
+    private static <T> String toJsonStringMapper(T model) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-            return objectMapper.writeValueAsString(object);
+            return objectMapper.writeValueAsString(model);
         } catch (Exception e) {
-            return object.toString();
+            return model.toString();
         }
     }
 
